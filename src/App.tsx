@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       {" "}
-      <Tree name "Charlie" />
+      <Tree name={"Charlita"} />
     </div>
   );
 }
