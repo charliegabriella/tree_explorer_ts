@@ -19,7 +19,47 @@ class PopularTrees extends React.Component<Props, State> {
   };
 
   render() {
-    return <div>{/* TODO */}</div>;
+    return (
+      <div>
+        {
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              this.addTree();
+            }}
+            style={{ display: "flex" }}
+          >
+            <p style={{ margin: ".25rem" }}>
+              <label>
+                Common name:{" "}
+                <input
+                  type="text"
+                  value={this.state.commonName}
+                  onChange={(e) =>
+                    this.setState({ commonName: e.target.value })
+                  }
+                />
+              </label>
+            </p>
+            <p style={{ margin: ".25rem" }}>
+              <label>
+                Scientific name:{" "}
+                <input
+                  type="text"
+                  value={this.state.scientificName}
+                  onChange={(e) =>
+                    this.setState({ scientificName: e.target.value })
+                  }
+                />
+              </label>
+            </p>
+            <p style={{ margin: ".25rem" }}>
+              <button type="submit">Add!</button>
+            </p>
+          </form>
+        }
+      </div>
+    );
   }
 }
 
