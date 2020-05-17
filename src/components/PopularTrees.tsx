@@ -16,6 +16,27 @@ class PopularTrees extends React.Component<Props, State> {
       { name: "Weeping willow", scientificName: "Salix sepulcralis" },
       { name: "London planetree", scientificName: "Platanus hybryda" },
     ],
+
+    name: "",
+    scientificName: "",
+  };
+
+  //the addTree method
+  addTree = () => {
+    console.log("adding trees?!?");
+    this.setState({
+      trees: [
+        this.setState({
+          trees: [
+            ...this.state,
+            {
+              name: this.state.name,
+              scientificName: this.state.scientificName,
+            },
+          ],
+        }),
+      ],
+    });
   };
 
   render() {
